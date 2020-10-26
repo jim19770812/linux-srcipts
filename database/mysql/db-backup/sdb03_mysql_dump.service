@@ -1,0 +1,9 @@
+[Unit]
+Description=MySQL数据库备份
+
+[Service]
+Type=simple
+WorkingDirectory=/data/mnt
+ExecStart=/data/mnt/backup.sh
+User=mysql
+Group=mysql

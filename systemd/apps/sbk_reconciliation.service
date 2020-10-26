@@ -1,0 +1,12 @@
+[Unit]
+Description=每天7:00点自动对账
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/java -jar /data/sbk-reconciliation/reconciliation-1.0-SNAPSHOT.jar /data/sbk-reconciliation/sbk.properties
+ExecReload=/bin/kill -HUP $MAINPID
+User=www
+Group=www
+
+[Install]
+WantedBy=multi-user.target

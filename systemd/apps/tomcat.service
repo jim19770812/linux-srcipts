@@ -1,0 +1,15 @@
+[Unit]
+Description=自动运行的tomcat服务器
+After=syslog.target network.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/usr/local/tomcat/bin/tomcat.pid
+ExecStart=/usr/local/tomcat/bin/startup.sh
+ExecStop=/usr/local/tomcat/bin/shutdown.sh
+PrivateTmp=true
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

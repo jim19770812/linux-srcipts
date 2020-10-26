@@ -1,0 +1,9 @@
+[Unit]
+Description=每天7:00点自动对账
+
+[Timer]
+OnCalendar=*-*-* 07:00:0
+Persistent=true
+
+[Install]
+WantedBy=multi-user.target

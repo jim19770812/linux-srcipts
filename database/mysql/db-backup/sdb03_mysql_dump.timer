@@ -1,0 +1,9 @@
+[Unit]
+Description=每天凌晨2点执行
+
+[Timer]
+OnCalendar=*-*-* 2:0:0
+Persistent=true
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=分布任务调度执行器
+
+[Service]
+Type=simple
+WorkingDirectory=/data/servers
+ExecStart=/usr/bin/java -jar xxl-job-executor.jar
+User=www
+Group=www
+#sdb03的用户与组改为mysql
